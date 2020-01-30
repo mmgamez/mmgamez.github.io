@@ -13,7 +13,7 @@ function getUrlVars() {
 }
 var game = getUrlVars()["game"]
 
-if(game == null){
+if(!game){
 document.getElementById("gamePlace").innerHTML = "ERR: No game specified.";
 }
 else{
