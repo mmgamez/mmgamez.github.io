@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>MMgamez - Home</title>
+<link href="style.css" rel="stylesheet">
+<script>
+function getUrlVars() {
+    var vars = {};
+    var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value) {
+        vars[key] = value;
+    });
+    return vars;
+}
+var game = getUrlVars()["game"]
+
+if(game == null){
+document.getElementById("gamePlace").innerHTML = "ERR: No game specified.";
+}
+else{
+var embed = document.createElement("EMBED");
+embed.width = "800px";
+embed.height = "600px";
+embed.src = "/games/" + game.toString;
+document.getElementById("gamePlace").appendChild(embed)
+}
+</script>
+</head>
+<body>
+<ul>
+  <li><a href="index.html">Home</a></li>
+  <li><a href="updates.html">Updates</a></li>
+  <li><a href="games.html" class="active">Games</a></li>
+  <li><a href="suggestions.html">Suggestions</a></li>
+  <li style="float:right"><a href="about.html">About</a></li>
+</ul>
+  <section id="gamePlace">
+  
+  </section>
+</body>
+</html>
