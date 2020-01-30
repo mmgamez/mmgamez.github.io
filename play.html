@@ -14,16 +14,9 @@ function getUrlVars() {
 }
 var game = getUrlVars()["game"];
 
-if(!game){
-var pe = document.createElement("p");
-pe.innerHTML="ERR: No game specified";
-document.getElementById("gamePlace").appendChild(pe)
-}
-else{
 
 var el = document.getElementById("gamePlace");
-swfobject.embedSWF("/games"+game, el, 800, 600, 10);
-}
+swfobject.embedSWF("/games"+game.toString(), el, 800, 600, 10);
 </script>
 </head>
 <body>
