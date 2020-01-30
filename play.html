@@ -3,6 +3,7 @@
 <head>
 <title>MMgamez - Home</title>
 <link href="style.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/swfobject/2.2/swfobject.js" />
 <script>
 function getUrlVars() {
     var vars = {};
@@ -14,14 +15,14 @@ function getUrlVars() {
 var game = getUrlVars()["game"]
 
 if(!game){
-document.getElementById("gamePlace").innerHTML = "ERR: No game specified.";
+var pe = document.createElement("p");
+pe.innerHTML="ERR: No game specified";
+document.getElementById("gamePlace").appendChild(pe)
 }
 else{
-var embed = document.createElement("EMBED");
-embed.width = "800px";
-embed.height = "600px";
-embed.src = "/games/" + game.toString;
-document.getElementById("gamePlace").appendChild(embed)
+
+var el = document.getElementById("gamePlace");
+swfobject.embedSWF("/games"+game, el, 800, 600, 10);
 }
 </script>
 </head>
