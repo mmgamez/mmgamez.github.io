@@ -41,3 +41,13 @@ body {
         font-family: sans-serif;
         font-size: 1.3em;
     }
+ h1 {
+        color: #13315C;
+    }
+    h2 {
+      font-size: 100%;
+      color: #13315C;
+    p {
+        color: #134074;
+      text-align:center;
+    }
