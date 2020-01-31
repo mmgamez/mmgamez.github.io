@@ -22,6 +22,7 @@ var emb = document.createElement("embed");
     emb.setAttribute("height", "600");
     emb.setAttribute("allowfullscreen", "true");
     emb.setAttribute('src', "games/"+game.toString());
+    emb.setAttribute('type', 'application/x-shockwave-flash')
     el.appendChild(emb);
 }
     setTimeout(function(){embedFile()}, 500)
