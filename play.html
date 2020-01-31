@@ -24,7 +24,7 @@ var emb = document.createElement("embed");
     emb.setAttribute('src', "games/"+game.toString());
     el.appendChild(emb);
 }
-    window.onload = embedFile();
+    setTimeout(function(){embedFile()}, 500)
 </script>
 </head>
 <body>
