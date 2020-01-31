@@ -16,13 +16,13 @@ function getUrlVars() {
 
 function embedFile(){
 var game = getUrlVars()["game"];
-    var el = document.getElementById("gamePlace");
+    
 var emb = document.createElement("embed");
     emb.setAttribute("width", "800");
     emb.setAttribute("height", "600");
     emb.setAttribute("allowfullscreen", "true");
     emb.setAttribute('src', "games/"+game.toString());
-    el.appendChild(emb);
+    document.getElementById("gamePlace").appendChild(emb);
 }
 </script>
 </head>
@@ -39,7 +39,7 @@ var emb = document.createElement("embed");
   <div id="gamePlace">
       
       </div>
-          
+          <button onclick="document.getElementsByTagName('embed')[0].requestFullscreen()">Fullscreen</button>
       </center>
   </section>
 </body>
