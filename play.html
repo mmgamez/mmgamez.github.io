@@ -25,10 +25,10 @@ var emb = document.createElement("embed");
     emb.setAttribute('type', 'application/x-shockwave-flash')
     el.appendChild(emb);
 }
-    setTimeout(function(){embedFile()}, 500)
+    
 </script>
 </head>
-<body>
+<body onload="embedFile()">
 <ul>
   <li><a href="index.html">Home</a></li>
   <li><a href="updates.html">Updates</a></li>
