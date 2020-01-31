@@ -5,7 +5,7 @@
 <link href="style.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/swfobject@2.2.1/index.min.js"></script>
 <script>
-    window.onload = embedFile();
+    
 function getUrlVars() {
     var vars = {};
     var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value) {
@@ -24,6 +24,7 @@ var emb = document.createElement("embed");
     emb.setAttribute('src', "games/"+game.toString());
     el.appendChild(emb);
 }
+    window.onload = embedFile();
 </script>
 </head>
 <body>
