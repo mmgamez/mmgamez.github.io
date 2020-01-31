@@ -12,10 +12,11 @@ function getUrlVars() {
     });
     return vars;
 }
-var game = getUrlVars()["game"];
+
 
 function embedFile(){
-var el = document.getElementById("gamePlace");
+var game = getUrlVars()["game"];
+    var el = document.getElementById("gamePlace");
 var emb = document.createElement("embed");
     emb.setAttribute("width", "800");
     emb.setAttribute("height", "600");
