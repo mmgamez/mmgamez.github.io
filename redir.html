@@ -1,0 +1,11 @@
+<script>
+function getUrlVars() {
+    var vars = {};
+    var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value) {
+        vars[key] = value;
+    });
+    return vars;
+}
+var game = getUrlVars()["game"];
+window.location.href = "https://mmgamez.github.io/play.html?"+game.toString();
+</script>
