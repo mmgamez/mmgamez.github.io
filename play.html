@@ -14,17 +14,18 @@ function getUrlVars() {
 }
 var game = getUrlVars()["game"];
 
-
+function embedFile(){
 var el = document.getElementById("gamePlace");
 var emb = document.createElement("embed");
-    emb.width = "800";
-    emb.height = "600";
-    emb.allowfullscreen = "true";
-    emb.src = "games/"+game.toString();
-    document.getElementById("gamePlace").appendChild(emb);
+    emb.setAttribute("width", "800");
+    emb.setAttribute("height", "600");
+    emb.setAttribute("allowfullscreen", "true");
+    emb.setAttribute('src', "games/"+game.toString());
+    el.appendChild(emb);
+}
 </script>
 </head>
-<body>
+<body onload='embedFile()'>
 <ul>
   <li><a href="index.html">Home</a></li>
   <li><a href="updates.html">Updates</a></li>
