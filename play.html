@@ -1,9 +1,9 @@
-<!DOCTYPE html>
+!DOCTYPE html>
 <html>
 <head>
-<title>MMgamez - Play</title>
+<title>MMgamez - Home</title>
 <link href="style.css" rel="stylesheet">
-    
+    <script src="https://cdn.jsdelivr.net/npm/swfobject@2.2.1/index.min.js"></script>
 <script>
 function getUrlVars() {
     var vars = {};
@@ -12,20 +12,20 @@ function getUrlVars() {
     });
     return vars;
 }
-
-
-function embedSWF(){
 var game = getUrlVars()["game"];
-var elem = document.createElement("EMBED");
-    elem.setAttribute("width", "800");
-    elem.setAttribute("height", "600");
-    elem.setAttribute("allowfullscreen", "true");
-    elem.setAttribute("src", "games/"+game.toString());
-    document.getElementById("gamePlace").appendChild(elem);
+
+function embedFile(){
+var el = document.getElementById("gamePlace");
+var emb = document.createElement("embed");
+    emb.setAttribute("width", "800");
+    emb.setAttribute("height", "600");
+    emb.setAttribute("allowfullscreen", "true");
+    emb.setAttribute('src', "games/"+game.toString());
+    el.appendChild(emb);
 }
 </script>
 </head>
-<body onload='embedSWF()'>
+<body onload='embedFile()'>
 <ul>
   <li><a href="index.html">Home</a></li>
   <li><a href="updates.html">Updates</a></li>
