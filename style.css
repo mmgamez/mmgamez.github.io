@@ -52,6 +52,7 @@ body {
       text-align:center;
     }
       embed{
+        position:absolute;
        float:center;
         width:900px;
         height: 800px;
