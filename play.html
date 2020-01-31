@@ -5,6 +5,7 @@
 <link href="style.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/swfobject@2.2.1/index.min.js"></script>
 <script>
+    window.onload = embedFile();
 function getUrlVars() {
     var vars = {};
     var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value) {
@@ -25,7 +26,7 @@ var emb = document.createElement("embed");
 }
 </script>
 </head>
-<body onload='embedFile()'>
+<body>
 <ul>
   <li><a href="index.html">Home</a></li>
   <li><a href="updates.html">Updates</a></li>
