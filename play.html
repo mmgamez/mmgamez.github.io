@@ -16,7 +16,12 @@ var game = getUrlVars()["game"];
 
 
 var el = document.getElementById("gamePlace");
-swfobject.embedSWF(("games/"+game.toString()), "gamePlace", "800", "600", "10");
+var emb = document.createElement("embed");
+    emb.width = "800";
+    emb.height = "600";
+    emb.allowfullscreen = "true";
+    emb.src = "games/"+game.toString();
+    document.getElementById("gamePlace").appendChild(emb);
 </script>
 </head>
 <body>
@@ -28,9 +33,11 @@ swfobject.embedSWF(("games/"+game.toString()), "gamePlace", "800", "600", "10");
   <li style="float:right"><a href="about.html">About</a></li>
 </ul>
   <section>
+      <center>
   <div id="gamePlace">
       
       </div>
+      </center>
   </section>
 </body>
 </html>
