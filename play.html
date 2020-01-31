@@ -16,13 +16,12 @@ function getUrlVars() {
 
 function embedFile(){
 var game = getUrlVars()["game"];
-    
-var emb = document.createElement("embed");
-    emb.setAttribute("width", "800");
-    emb.setAttribute("height", "600");
-    emb.setAttribute("allowfullscreen", "true");
-    emb.setAttribute('src', "games/"+game.toString());
-    document.getElementById("gamePlace").appendChild(emb);
+var elem = document.createElement("EMBED");
+    elem.setAttribute("width", "800");
+    elem.setAttribute("height", "600");
+    elem.setAttribute("allowfullscreen", "true");
+    elem.setAttribute("src", "games/"+game.toString());
+    document.getElementById("gamePlace").appendChild(elem);
 }
 </script>
 </head>
